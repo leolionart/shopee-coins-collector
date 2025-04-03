@@ -19,24 +19,34 @@ export class ShopeeCrawler extends BaseCrawler {
   aesKey: string;
 
   constructor (
-		readonly launchOptions: PuppeteerLaunchOptions,
+		launchOptions: PuppeteerLaunchOptions,
 		options: ICrawlerOptions = {},
 		cookie?: Protocol.Network.Cookie | any) {
-    super(launchOptions, options);
+
+    // Define default args, including --no-sandbox
+    const defaultArgs = [
+      '--disable-blink-features',
+      '--disable-blink-features=AutomationControlled',
+      '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
+      '--no-sandbox'
+    ];
+
+    // Ensure launchOptions.args exists and merge default args
+    const mergedLaunchOptions = {
+      ...launchOptions,
+      args: [
+        ...(launchOptions.args || []), // Keep existing args
+        ...defaultArgs             // Add default args
+      ]
+    };
+
+    // Pass the merged options to the super constructor
+    super(mergedLaunchOptions, options);
+
     this.usr = <string>login;
     this.pwd = <string>pwd;
     this.aesKey = <string>aesKey;
     this.pathCookie = cookie;
-    const defaultCrawlerOptions = {
-      args: [
-        '--disable-blink-features',
-        '--disable-blink-features=AutomationControlled',
-        '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
-        '--no-sandbox'
-      ]
-    };
-
-    this.options = Object.assign({}, this.options, defaultCrawlerOptions);
   }
 
   async run () {
