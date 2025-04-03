@@ -26,18 +26,18 @@ export const COIN_URL = `${HOME_PAGE}shopee-coins`
 export const TXT = {
   LOGIN_BTN: 'ĐĂNG NHẬP',
   // Login message
-  USE_LINK: '使用連結驗證',
-  REWARD: '蝦幣獎勵',
+  USE_LINK: 'Sử dụng liên kết để xác minh',
+  REWARD: 'Phần thưởng Shopee Xu',
   WRONG_PASSWORDS: [
-    '你的帳號或密碼不正確，請再試一次',
-    '登入失敗，請稍後再試或使用其他登入方法',
-    '您輸入的帳號或密碼不正確，若遇到困難，請重設您的密碼。'
+    'Tài khoản hoặc mật khẩu của bạn không chính xác, vui lòng thử lại',
+    'Đăng nhập thất bại, vui lòng thử lại sau hoặc sử dụng phương thức đăng nhập khác',
+    'Tài khoản hoặc mật khẩu bạn nhập không chính xác. Nếu gặp khó khăn, vui lòng đặt lại mật khẩu.'
   ],
-  PKAY_PUZZLE: '點擊以重新載入頁面',
-  EMAIL_AUTH: '透過電子郵件連結驗證',
-  FAILURE: '很抱歉，您的身份驗證已遭到拒絕。',
-  ON_CELLPHONE: '請在您的手機上回覆',
-  TOO_MUCH_TRY: '您已達到今日驗證次數上限。',
-  RECEIVE_COIN: '完成簽到',
-  COIN_RECEIVED: '明天再回來',
+  PKAY_PUZZLE: 'Nhấp để tải lại trang',
+  EMAIL_AUTH: 'Xác minh qua liên kết email',
+  FAILURE: 'Xin lỗi, xác minh danh tính của bạn đã bị từ chối.',
+  ON_CELLPHONE: 'Vui lòng trả lời trên điện thoại của bạn',
+  TOO_MUCH_TRY: 'Bạn đã đạt đến giới hạn số lần xác minh tối đa trong ngày hôm nay.',
+  RECEIVE_COIN: 'Nhận Xu',
+  COIN_RECEIVED: 'Ngày mai quay lại',
 }
