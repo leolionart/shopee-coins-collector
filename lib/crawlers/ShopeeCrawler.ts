@@ -1,4 +1,3 @@
-
 /* eslint-disable promise/param-names */
 /* eslint-disable no-tabs */
 import * as fs from 'fs';
@@ -12,7 +11,7 @@ import { login, pwd, aesKey, HOME_PAGE, LOGIN_PAGE, COIN_URL, TXT } from '../con
 import { AES, enc } from 'crypto-ts';
 
 export class ShopeeCrawler extends BaseCrawler {
-  readonly homepage = HOME_PAGE';
+  readonly homepage = HOME_PAGE;
   readonly loginpage = LOGIN_PAGE;
   readonly pathCookie: any;
   usr: string;
