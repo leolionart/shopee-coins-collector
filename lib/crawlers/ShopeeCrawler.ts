@@ -12,8 +12,8 @@ import { login, pwd, aesKey } from '../config';
 import { AES, enc } from 'crypto-ts';
 
 export class ShopeeCrawler extends BaseCrawler {
-  readonly homepage = 'https://shopee.tw/';
-  readonly loginpage = 'https://shopee.tw/buyer/login?from=https%3A%2F%2Fshopee.tw%2Fuser%2Fcoin&next=https%3A%2F%2Fshopee.tw%2Fshopee-coins';
+  readonly homepage = 'https://shopee.vn/';
+  readonly loginpage = 'https://shopee.vn/buyer/login?from=https%3A%2F%2Fshopee.vn%2Fuser%2Fcoin&next=https%3A%2F%2Fshopee.vn%2Fshopee-coins';
   readonly pathCookie: any;
   usr: string;
   pwd: string;
@@ -127,7 +127,7 @@ export class ShopeeCrawler extends BaseCrawler {
     const curUrl = page.url();
     logger.debug('Currently at url: ' + curUrl);
 
-    const coinUrl = 'https://shopee.tw/shopee-coins';
+    const coinUrl = 'https://shopee.vn/shopee-coins';
     if (curUrl === coinUrl) {
       // If the user has logged in,
       // the webpage will redirect to the coin page
