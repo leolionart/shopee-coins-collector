@@ -145,7 +145,7 @@ export class ShopeeCrawler extends BaseCrawler {
     }
 
     logger.info('Try to login by username and password.');
-    logger.info('Start to login shopee.');
+    logger.info('Start to login shopee.vn');
 
     const loginIpt = 'input[name=loginKey]';
     await this.waitFor(page, loginIpt);
